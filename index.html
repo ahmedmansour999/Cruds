@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer ></script>
+    <title>management system </title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>CURDS</h2>
+            <p>product management system </p>
+        </div>
+
+        <div class="input">
+            <input type="text" id="title" placeholder="Title" required />
+            <div class="price">
+                <input onkeyup="getTotal()" id="price" type="number" placeholder="Price" />
+                <input onkeyup="getTotal()" id="taxes" type="NUMBER" placeholder="Taxes"  />
+                <input onkeyup="getTotal()" id="ads" type="NUMBER" placeholder="ads"  />
+                <input onkeyup="getTotal()" id="discount" type="NUMBER" placeholder="Discount"   />
+                <small  id="total" class="total" ></small>
+            </div>
+            <input type="text" id="count" placeholder="Count" />
+            <input type="text" id="category" placeholder="Category" />
+            <button class="btnAdd" id="btnAdd" type="submit">Add Product</button>
+        </div>
+
+        <div class="output">
+            <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search" />
+            <div class="search">
+                <button id="searchtitle" onclick="getSearchMood(this.id)"  >search by title</button>
+                <button id="searchcat"   onclick="getSearchMood(this.id)" >search by Category</button>
+            </div>
+
+            <div id="delAll">
+            </div>
+
+            <table >
+                <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>PRICE</th>
+                    <th>TAXES</th>
+                    <th>ADS</th>
+                    <th>DISCOUNT</th>
+                    <th>TOTAL</th>
+                    <th>CATOGERY</th>
+                    <th>UPDATE</th>
+                    <th>DELETE</th>
+                </tr>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
